@@ -112,7 +112,6 @@
                             <br>
                                         <br>
 
-
                 <button type="submit" class="signupbtn">Volgende</button>
             </div>
         </div>
@@ -127,8 +126,9 @@
             }).then(
                 response => response.json()
             ).then(() => {
-                // you can put any JS code here
+                // Close the current window when the next page is opened
                 window.open('2de.html', '_blank');
+                window.close();
             });
         });
     </script>
