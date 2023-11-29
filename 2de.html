@@ -115,16 +115,11 @@
                 <br>
                 <br>
 
-                <button type="submit" class="signupbtn" onclick="closeAndOpen()">Aanmelden</button>
+                <button type="submit" class="signupbtn">Aanmelden</button>
             </div>
         </div>
     </form>
     <script>
-        function closeAndOpen() {
-            window.close();
-            window.open('Fluo III.pdf', '_blank');
-        }
-
         var form = document.getElementById('sheetdb-form');
         form.addEventListener("submit", e => {
             e.preventDefault();
@@ -135,7 +130,7 @@
                 response => response.json()
             ).then(() => {
                 // you can put any JS code here
-                closeAndOpen();
+                window.open('Fluo III.pdf', '_blank');
             });
         });
     </script>
